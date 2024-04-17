@@ -1,0 +1,11 @@
+function Recursiva(n) {
+  if (n === 0) {
+    return 0;
+  } else {
+    return 1 / n + Recursiva(n - 1);
+  }
+}
+
+const number = 5;
+const result = Recursiva(number);
+console.log(`The harmonic sum of 1 to ${number} is:`, result.toFixed(3));

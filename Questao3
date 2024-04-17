@@ -1,0 +1,15 @@
+  function exponenciacaoRecursiva(base, expoente) {
+  if (expoente === 0) {
+    return 1;
+  } else if (expoente % 2 === 0) {
+    const metadePotencia = exponenciacaoRecursiva(base, expoente / 2);
+    return metadePotencia * metadePotencia;
+  } else {
+    return base * exponenciacaoRecursiva(base, expoente - 1);
+  }
+}
+
+const base = 2;
+const expoente = 5;
+const resultado = exponenciacaoRecursiva(base, expoente);
+console.log(`${base} elevado a potência de ${expoente} é:`, resultado);

@@ -1,0 +1,9 @@
+function sumRecursive(n) {
+  if (n === 0) {
+    return 0;
+  } else {
+    return n + sumRecursive(n - 1);
+  }
+}
+
+console.log(sumRecursive(5)); // Output: 15
